@@ -5,7 +5,9 @@ not_installed <- needed_packages[!(needed_packages %in% installed.packages()[ , 
 # Install not installed packages
 if(length(not_installed)) install.packages(not_installed, repos = "http://cran.us.r-project.org") 
 
+s_perform<-read_csv('https://raw.githubusercontent.com/Devesan/Stats_R_code/main/Datasets/sperformance-dataset.csv')
 
+str(s_perform)
 
 #Research Question 1
 #Simple scatterplot of feeling of control and perceived stress

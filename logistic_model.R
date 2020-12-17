@@ -1,4 +1,4 @@
-needed_packages <- c("Epi",  "generalhoslem", "regclass", "DescTools")                      
+needed_packages <- c("Epi",  "generalhoslem", "regclass", "DescTools","tidyverse")                      
 # Extract not installed packages
 not_installed <- needed_packages[!(needed_packages %in% installed.packages()[ , "Package"])]    
 # Install not installed packages
@@ -10,6 +10,10 @@ library(Epi)#ROC Curve
 library(generalhoslem)#Needed to test assumption of linearity
 library("regclass")#For confusion matrix
 library(DescTools)
+
+s_perform<-read_csv('https://raw.githubusercontent.com/Devesan/Stats_R_code/main/Datasets/sperformance-dataset.csv')
+
+str(s_perform)
 
 #Make sure categorical data is used as factors
 

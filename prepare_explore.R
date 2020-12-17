@@ -8,7 +8,7 @@ if(length(not_installed)) install.packages(not_installed, repos = "http://cran.u
 
 
 
-s_perform<-read_csv('../sperformance-dataset.csv')
+s_perform<-read_csv('https://raw.githubusercontent.com/Devesan/Stats_R_code/main/Datasets/sperformance-dataset.csv')
 summary(s_perform)
 str(s_perform)
 factor(s_perform$Medu)

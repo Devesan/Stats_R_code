@@ -1,5 +1,5 @@
 #Dimension Reduction
-needed_packages <- c("psych",  "REdaS", "Hmisc", "corrplot", "ggcorrplot", "factoextra",  "nFactors")                      
+needed_packages <- c("psych",  "REdaS", "Hmisc", "corrplot", "ggcorrplot", "factoextra",  "nFactors","tidyverse")                      
 # Extract not installed packages
 not_installed <- needed_packages[!(needed_packages %in% installed.packages()[ , "Package"])]    
 # Install not installed packages
@@ -12,7 +12,7 @@ library(ggcorrplot)
 library(factoextra)#Used for principal component analysis to get a different view of eigenvalues
 library(nFactors)
 
-dim_data <- read_csv('../studentpIusepersonality.csv')
+dim_data <- read_csv('https://raw.githubusercontent.com/Devesan/Stats_R_code/main/Datasets/studentpIusepersonality.csv')
 str(dim_data)
 d_data<-dim_data %>% select(matches("^D[0-9]+$"))
 
