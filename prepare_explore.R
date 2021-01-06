@@ -11,6 +11,11 @@ if(length(not_installed)) install.packages(not_installed, repos = "http://cran.u
 s_perform<-read_csv('https://raw.githubusercontent.com/Devesan/Stats_R_code/main/Datasets/sperformance-dataset.csv')
 summary(s_perform)
 str(s_perform)
+
+na_count <-lapply(s_perform, function(y) round((sum(length(which(y==0))))/length(y)*100))
+na_count <- data.frame(na_count)
+na_count
+
 factor(s_perform$Medu)
 library(ggplot2)
 cdat <- s_perform %>% summarise_at(vars(mG1), funs(mean(., na.rm=TRUE)))
